@@ -8,58 +8,62 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 function PricingScreen({ navigation }) {
     return (
         <View style={styles.container}>
-            <Image
-                source={require('../assets/dog1.png')}
-                style={styles.image}
-                resizeMode="contain"
-            >
-            </Image>
+            
             <TouchableOpacity
 
                 onPress={() => navigation.navigate('DogWalking')}
             >
+                <Image
+                    source={require('../assets/dog1.png')}
+                    style={styles.image}
+                    resizeMode="contain"
+                >
+                </Image>
                 <Text style={styles.text}>Dog Walking</Text>
             </TouchableOpacity>
 
-            <Image
-                source={require('../assets/Dogwalkingpic.png')}
-                style={styles.image2}
-                resizeMode="contain"
-            >
-            </Image>
+            
 
             <TouchableOpacity
 
                 onPress={() => navigation.navigate('HouseSitting')}
             >
+                <Image
+                    source={require('../assets/Dogwalkingpic.png')}
+                    style={styles.image2}
+                    resizeMode="contain"
+                >
+                </Image>
                 <Text style={styles.text}>Overnight House Sitting</Text>
             </TouchableOpacity>
 
-            <Image
-                source={require('../assets/dog2.png')}
-                style={styles.image}
-                resizeMode="contain"
-            >
-            </Image>
+            
 
             <TouchableOpacity
 
                 onPress={() => navigation.navigate('PottyBreaks')}
             >
+                <Image
+                    source={require('../assets/dog2.png')}
+                    style={styles.image3}
+                    resizeMode="contain"
+                >
+                </Image>
                 <Text style={styles.text}>Midday Potty Breaks</Text>
             </TouchableOpacity>
 
-            <Image
-                source={require('../assets/dropinpic.png')}
-                style={styles.image2}
-                resizeMode="contain"
-            >
-            </Image>
+            
 
             <TouchableOpacity
 
                 onPress={() => navigation.navigate('DropinVisits')}
             >
+                <Image
+                    source={require('../assets/dropinpic.png')}
+                    style={styles.image2}
+                    resizeMode="contain"
+                >
+                </Image>
                 <Text style={styles.text}>Drop-in Visits (Includes feedings)</Text>
             </TouchableOpacity>
 
@@ -88,6 +92,12 @@ const styles = StyleSheet.create({
     image2: {
         width: 300,
         height: 125,
+    },
+
+    image3: {
+        width: 125,
+        height: 125,
+        marginLeft: '9%',
     },
 
     text: {

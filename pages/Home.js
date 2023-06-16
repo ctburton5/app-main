@@ -1,11 +1,35 @@
 
-import * as React from 'react';
-import { Button, View, Text } from 'react-native';
+import React, { Component } from 'react';
+import { Button, View, Text, Linking, WebView } from 'react-native';
 import { StyleSheet, ImageBackground, Image, TouchableOpacity, Alert } from 'react-native';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-function HomeScreen( {navigation} ) {
+
+function HomeScreen ( {navigation } ) {
+    navigationOptions = {
+        title: 'HomeScreen',
+    };
+
+    const openSignUpPortal = () => {
+        navigation.navigate(
+            'TTPSignup',
+            { url: 'https://www.timetopet.com/portal/burton-and-dogs/create-account' }
+        )
+    }
+
+    const openLoginPortal = () => {
+        navigation.navigate(
+            'TTPLogin',
+            { url: 'https://www.timetopet.com/portal/login' }
+        )
+    }
+    /*
+    const openLoginPortal = () => {
+        const loginURL = 'https://www.timetopet.com/portal/login';
+        Linking.openURL(loginURL);
+    };
+    */
 
     return (
         <ImageBackground
@@ -24,8 +48,8 @@ function HomeScreen( {navigation} ) {
                 <TouchableOpacity
                 
                     style={styles.buttonContainer}
-                    onPress={() => navigation.navigate('Signup')}
-                >
+
+                    onPress={openSignUpPortal}                >
                     <Text style={styles.button}>Sign Up</Text>
                 </TouchableOpacity>
                 
@@ -36,7 +60,8 @@ function HomeScreen( {navigation} ) {
 
                 <TouchableOpacity
                     style={styles.buttonContainer}
-                    onPress={() => navigation.navigate('Login')}
+                    onPress={openLoginPortal}
+
                 >
                     <Text style={styles.button}>Log In</Text>
                 </TouchableOpacity>

@@ -1,6 +1,26 @@
 // Example of Splash, Login and Sign Up in React Native
 // https://aboutreact.com/react-native-login-and-signup/
 
+
+
+
+
+
+
+/*
+
+
+
+NO LONGER NEEDED
+
+
+*/
+
+
+
+
+
+
 // Import React and Component
 import React, { useState, createRef } from 'react';
 import {

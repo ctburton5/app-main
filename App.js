@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, View, Text, Linking } from 'react-native';
+import { Button, View, Text, Linking, WebView } from 'react-native';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // pages //
@@ -13,8 +13,9 @@ import PottyBreakScreen from "./pages/PottyBreaks"
 import DropinVisitsScreen from "./pages/DropinVisits"
 import AboutScreen from "./pages/About"
 import TTPLogin from "./pages/TTPLogin"
+import TTPSignup from "./pages/TTPSignup"
 
-import { WebView } from 'react-native-webview';
+//import { WebView } from 'react-native-webview';
 
 
 /*
@@ -33,7 +34,7 @@ export default createStackNavigator({
 
 
 const Stack = createNativeStackNavigator();
-
+/*
 const TimeToPetPortalScreen = () => {
   return (
     <WebView
@@ -41,7 +42,7 @@ const TimeToPetPortalScreen = () => {
     />
   );
 };
-
+*/
 
 function App() {
   //const navigation = useNavigation();
@@ -94,7 +95,13 @@ function App() {
           name="TTPLogin"
           component={TTPLogin}
         >
-          
+        
+        </Stack.Screen>
+        <Stack.Screen
+          name="TTPSignup"
+          component={TTPSignup}
+        >
+
         </Stack.Screen>
         <Stack.Screen
           name="Login" component={LoginScreen}

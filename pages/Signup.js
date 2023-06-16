@@ -1,4 +1,27 @@
 
+
+
+/*
+
+
+
+
+NO LONGER NEEDED
+
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
 import * as React from 'react';
 import { SafeAreaView, StyleSheet, Button, View, Text, TextInput, TouchableOpacity, Image, ScrollView } from 'react-native';
 //import { Select } from 'react-select';

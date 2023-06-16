@@ -4,7 +4,7 @@ import { WebView } from 'react-native-webview'
 import {
     View,
     TouchableOpacity,
-    Text, 
+    Text,
 } from 'react-native'
 
 const BackButton = ({ navigation }) =>
@@ -14,19 +14,19 @@ const BackButton = ({ navigation }) =>
         <Text>&lt; Back</Text>
     </TouchableOpacity>
 
-export default class TTPLogin extends Component {
+export default class TTPSignup extends Component {
 
     static navigationOptions = ({ navigation }) => ({
-        title: 'TTPLogin',
+        title: 'TTPSignup',
         headerLeft: <BackButton navigation={navigation} />
     })
 
     render() {
         return (
-            <View style={{ flex: 1, padding: 5}}>
+            <View style={{ flex: 1, padding: 5 }}>
                 <WebView
                     source={{
-                        uri: 'https://www.timetopet.com/portal/login'
+                        uri: 'https://www.timetopet.com/portal/burton-and-dogs/create-account'
                     }}
                     style={{ flex: 1 }}
 

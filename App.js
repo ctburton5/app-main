@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { Button, View, Text } from 'react-native';
+import React, { Component } from 'react';
+import { Button, View, Text, Linking } from 'react-native';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // pages //
@@ -12,8 +12,36 @@ import HouseSittingScreen from "./pages/HouseSitting"
 import PottyBreakScreen from "./pages/PottyBreaks"
 import DropinVisitsScreen from "./pages/DropinVisits"
 import AboutScreen from "./pages/About"
+import TTPLogin from "./pages/TTPLogin"
+
+import { WebView } from 'react-native-webview';
+
+
+/*
+import React, { Component } from 'react';
+import { createStackNavigator } from 'react-navigation';
+
+import Home from './Home'
+import Browser from './Browser'
+
+export default createStackNavigator({
+  Home: { screen: Home },
+  Browser: { screen: Browser }
+});
+*/
+
+
 
 const Stack = createNativeStackNavigator();
+
+const TimeToPetPortalScreen = () => {
+  return (
+    <WebView
+      source={{ html: 'https://www.timetopet.com/portal/burton-and-dogs/create-account' }}
+    />
+  );
+};
+
 
 function App() {
   //const navigation = useNavigation();
@@ -62,6 +90,12 @@ function App() {
             ),
           })}
         />
+        <Stack.Screen
+          name="TTPLogin"
+          component={TTPLogin}
+        >
+          
+        </Stack.Screen>
         <Stack.Screen
           name="Login" component={LoginScreen}
           options={({ navigation }) => ({
@@ -202,3 +236,4 @@ function App() {
 }
 
 export default App;
+
